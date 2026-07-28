@@ -39,7 +39,6 @@ COMPASS/
 ├── data/          # input metadata and processed evidence tables
 ├── scripts/       # COMPASS scoring and analysis scripts
 ├── results/       # output scores, benchmarks and figures
-├── docs/          # documentation
 └── README.md
 ```
 
