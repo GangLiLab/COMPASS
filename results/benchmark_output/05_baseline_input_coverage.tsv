@@ -1,0 +1,5 @@
+item	n
+canonical_universe	18642
+genes_with_any_RNA_baseline_evidence	24963
+genes_with_any_ChIP_baseline_evidence	24664
+genes_with_both_RNA_and_ChIP_somewhere	18500

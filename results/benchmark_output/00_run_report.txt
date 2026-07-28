@@ -1,0 +1,39 @@
+RUN_MODE = final
+N_BOOT = 2000
+Canonical COMPASS file = data/human_normal_all.csv
+
+=== STEP 1: reproduce thesis ROC ===
+Protein-coding gene universe (non-ESC aggregate) = 18642
+PRC2: positives=626, AUC=0.8822, 95% CI=0.8695–0.8944, AUC_all=0.885
+SUZ12: positives=998, AUC=0.8622, 95% CI=0.851–0.872, AUC_all=0.8636
+EED: positives=1017, AUC=0.8125, 95% CI=0.797–0.8269, AUC_all=0.8133
+PASS: thesis ROC sanity checks reproduced.
+
+=== STEP 1b: final-journal ROC confidence intervals ===
+Journal CI PRC2: AUC=0.8822, 95% CI=0.8692–0.8934, B=2000
+Journal CI SUZ12: AUC=0.8622, 95% CI=0.8519–0.8727, B=2000
+Journal CI EED: AUC=0.8125, 95% CI=0.7981–0.8267, B=2000
+
+=== STEP 2: load modality-level final scores ===
+Optional RNA frequency file found: data/1.3-rna_freq.rda
+Recovered RNA directions from 1.3-rna_freq.rda: 229250 gene-tissue rows.
+Recovered direction counts: down 101033; no_dominant_direction 48716; up 79501
+RNA direction source = 1.3-rna_freq.rda
+
+=== STEP 3: calculate baselines ===
+
+=== STEP 4: external benchmark ===
+
+=== STEP 5: paired bootstrap ===
+
+=== DONE ===
+Return the whole folder: benchmark_output
+Most important files:
+  01_thesis_ROC_reproduction.tsv
+  02_sanity_checks.tsv
+  03_gene_level_scores_COMPASS_and_baselines.tsv
+  05_baseline_input_coverage.tsv
+  06_reference_metrics.tsv
+  07_topK_metrics.tsv
+  08_bootstrap_COMPASS_vs_baselines.tsv
+  09_method_spearman_correlations.tsv
